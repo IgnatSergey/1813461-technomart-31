@@ -1,0 +1,206 @@
+/* Variables */
+
+:root {
+--basicDarkBlue: #293449;
+--basicExtraDarkBlue: #161D29;
+--basicLightBlue: #F1F5F7;
+--basicExtraLight: #F9F5F0;
+--extraLightLogoCompanies: #EAEAEA;
+--basicWhite: #FFFFFF;
+--basicBlack: #000000;
+--materialsBackground: #FFBF47;
+--toolBackground: #3BBCE3;
+--technicsBackground: #DC91D8;
+--discountBackground: #8ED78F;
+--deliverBackground: #FFBF47;
+--basicRed: #EE3643;
+--cardBorderColor: #EAEAEA;
+--buttonServiceSliderColor: #32425C;
+--serviceSliderBackground: #F1F5F7;
+--footerDarkBlue: #32425C;
+--buttonOrderColor: #63A63E;
+--buttonOrderColorHover: #5FBB2D;
+--basicGreyLight: #C5C5C5;
+}
+
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basicWhite);
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--basicWhite);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mainHeader {
+  background-color: var(--basicLightBlue);
+}
+
+.headerLine {
+  background: var(--basicDarkBlue);
+}
+
+.searchForm input{
+  background-color: transparent;
+  border: none;
+}
+
+.searchForm input::placeholder {
+  color: var(--basicWhite);
+}
+
+.searchForm input:focus {
+  background: var(--basicWhite);
+  color: var(--basicBlack);
+}
+
+.buyList {
+  list-style: none;
+}
+
+.marker:focus,
+.basket:focus {
+  background: var(--basicExtraDarkBlue);
+}
+
+.checkout {
+  background-color: var(--buttonOrderColor);
+}
+
+.checkout:hover {
+  background-color: var(--buttonOrderColorHover);
+}
+
+.checkout:focus {
+  background-color: var(--buttonOrderColor);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.mainTitle {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basicRed);
+}
+
+.contactsHeader {
+  text-align: center;
+}
+
+.phone {
+  font-weight: 700;
+  color: var(--basicRed);
+}
+
+.address{
+  color: var(--buttonServiceSliderColor);
+  font-size: 14px;
+}
+
+.loginList {
+  font-size: 21px;
+  line-height: 21px;
+  list-style: none;
+}
+
+.signIn,
+.checkIn {
+  background-color: var(--basicWhite);
+  color: var(--basicBlack);
+}
+
+.signIn:hover,
+.checkIn:hover {
+  color: var(--basicRed);
+}
+
+.signIn:focus,
+.checkIn:focus {
+  color: var(--basicGreyLight);
+}
+
+.siteNavigation {
+  list-style: none;
+}
+
+.siteNavigation a {
+  background-color: var(--footerDarkBlue);
+}
+
+.siteNavigation a:hover {
+  background-color: var(--basicDarkBlue);
+}
+
+.siteNavigation a:focus {
+  background-color: var(--basicDarkBlue);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.productsList {
+  list-style: none;
+}
+
+.productsItemMaterials {
+  background-color: var(--materialsBackground);
+}
+
+.productsItemTool {
+  background-color: var(--toolBackground);
+}
+
+.productsItemTechnics {
+  background-color: var(--technicsBackground);
+}
+
+.offersItemDiscount {
+  background-color: var(--discountBackground);
+}
+
+.offersItemDeliver {
+  background-color: var(--deliverBackground);
+}
+
+.productsItem h3,
+.offersItem h3 {
+  font-weight: 700;
+}
+
+.productsItem a,
+.offersItem a {
+  font-size: 14px;
+  line-height: 18px;
+  background-color: rgb(255, 255, 255, 0.3);
+}
+
+.productsItem a:hover,
+.offersItem a:hover {
+  background-color: rgb(197, 197, 197, 0.3);
+}
+
+.productsItem a:focus,
+.offersItem a:focus {
+  background-color: rgb(169, 169, 169, 0.3);
+}
+
+
+
