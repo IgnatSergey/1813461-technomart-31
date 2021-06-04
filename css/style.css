@@ -31,10 +31,13 @@ body {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
 }
 
 a {
@@ -102,20 +105,20 @@ img {
   text-align: center;
 }
 
-.phone {
+.phone-header {
   font-weight: 700;
   color: var(--basic-red);
 }
 
-.address {
-  color: #32425c;
+.address-header {
   font-size: 14px;
+  color: #32425c;
 }
 
 .login-list {
+  list-style: none;
   font-size: 21px;
   line-height: 21px;
-  list-style: none;
 }
 
 .signin,
@@ -201,14 +204,14 @@ img {
 .slider-container {
   width: 620px;
   height: 266px;
-  background-color: #c5c5c5;
+  background-color: var(--basic-background);
   background-image: url(../img/drill.jpg);
 }
 
 .slider-container h3 {
-  font-weight: 700;
   font-size: 36px;
   line-height: 36px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -217,8 +220,8 @@ img {
   vertical-align: middle;
   font-size: 14px;
   line-height: 18px;
-  text-transform: uppercase;
   background-color: var(--basic-red);
+  text-transform: uppercase;
 }
 
 .button:hover {
@@ -253,17 +256,17 @@ img {
 }
 
 .card-container {
-  background-color: var(--basic-white);
-  border: 1px solid #eaeaea;
   text-align: center;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  background-color: var(--basic-white);
   color: var(--basic-black);
   background-image: url(../img/red-button.svg);
   background-position: center 267px;
   background-repeat: no-repeat;
+  border: 1px solid #eaeaea;
 }
 
 .card-container:hover {
@@ -295,12 +298,16 @@ img {
   height: 145px;
   text-align: center;
   vertical-align: middle;
-  border: 1px solid #eaeaea;
   background-color: var(--basic-white);
+  border: 1px solid #eaeaea;
 }
 
 .manufacturers-container:hover {
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.manufacturers-container:active .manufacturersLogo {
+  opacity: 0.3;
 }
 
 .services-container {
@@ -334,12 +341,12 @@ img {
 }
 
 .button-services-slider {
+  vertical-align: middle;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
-  color: var(--basic-white);
-  vertical-align: middle;
   background-color: var(--basic-dark-blue);
+  color: var(--basic-white);
   border: none;
   border-radius: 0px;
   box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
@@ -362,16 +369,15 @@ img {
 }
 
 .deliver-item {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
-  color: var(--basic-black);
 }
 
 .map {
   width: 300px;
   height: 158px;
+  background-color: var(--basic-background);
   background-image: url(../img/map.png);
   background-repeat: no-repeat;
 }
@@ -406,7 +412,7 @@ img {
   line-height: 18px;
 }
 
-.social-footerList {
+.social-footer-list {
   list-style: none;
   text-align: center;
 }
@@ -420,6 +426,17 @@ img {
   color: #ffd180;
 }
 
+.mail-feedback:hover,
+.site-designed-by:hover {
+  text-decoration: underline;
+}
+
+.mail-feedback:focus,
+.site-designed-by:focus {
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
 .social-button svg {
   fill: #212a3a;
 }
@@ -430,8 +447,8 @@ img {
 }
 
 .modal {
-  color: var(--basic-black);
   background-color: var(--basic-white);
+  color: var(--basic-black);
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
 }
 
