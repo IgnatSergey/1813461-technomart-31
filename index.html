@@ -111,47 +111,47 @@
         <h2>Популярные товары:</h2>
         <a class="button" href="#" title="Все популярные товары">все популярные товары</a>
       </div>
-      <ul class="popular-goods-list card-container">
-        <li>
+      <ul class="popular-goods-list">
+        <li class="card">
           <a href="#" title="Перфоратор BOSCH BFG 9000">
-            <div class="card">
-              <img src="img/catalog/bosch_bfg_9000.jpg" width="184" height="164"
-                alt="Перфоратор BOSCH BFG 9000, синего цвета с черными вставками">
-              <h3>Перфоратор BOSCH BFG 9000</h3>
-              <s>32500 Р.</s>
+            <img src="img/catalog/bosch_bfg_9000.jpg" width="184" height="164"
+              alt="Перфоратор BOSCH BFG 9000, синего цвета с черными вставками">
+            <h3>Перфоратор BOSCH BFG 9000</h3>
+            <s>32500 Р.</s>
+            <div class="price">
               <p>25500 Р.</p>
             </div>
           </a>
         </li>
-        <li>
+        <li class="card">
           <a href="#" title="Перфоратор BOSCH BFG 3000">
-            <div class="card">
-              <img src="img/catalog/bosch_bfg_3000.jpg" width="127" height="112"
-                alt="Перфоратор BOSCH BFG 3000 с аккумулятором, синего цвета с черными вставками и красными кнопками">
-              <h3>Перфоратор BOSCH BFG 3000</h3>
-              <s>22500 Р.</s>
+            <img src="img/catalog/bosch_bfg_3000.jpg" width="127" height="112"
+              alt="Перфоратор BOSCH BFG 3000 с аккумулятором, синего цвета с черными вставками и красными кнопками">
+            <h3>Перфоратор BOSCH BFG 3000</h3>
+            <s>22500 Р.</s>
+            <div class="price">
               <p>15500 Р.</p>
             </div>
           </a>
         </li>
-        <li>
+        <li class="card">
           <a href="#" title="Перфоратор BOSCH BFG 6000">
-            <div class="card">
-              <img src="img/catalog/bosch_bfg_6000.jpg" width="144" height="128"
-                alt="Перфоратор BOSCH BFG 6000 с аккумулятором, синего цвета с черными вставками и красными кнопками">
-              <h3>Перфоратор BOSCH BFG 6000</h3>
-              <s>30500 Р.</s>
+            <img src="img/catalog/bosch_bfg_6000.jpg" width="144" height="128"
+              alt="Перфоратор BOSCH BFG 6000 с аккумулятором, синего цвета с черными вставками и красными кнопками">
+            <h3>Перфоратор BOSCH BFG 6000</h3>
+            <s>30500 Р.</s>
+            <div class="price">
               <p>25500 Р.</p>
             </div>
           </a>
         </li>
-        <li>
+        <li class="card">
           <a href="#" title="Перфоратор BOSCH BFG 2000">
-            <div class="card">
-              <img src="img/catalog/bosch_bfg_2000.jpg" width="127" height="112"
-                alt="Перфоратор BOSCH BFG 2000  с аккумулятором, синего цвета с черными вставками и красными кнопками">
-              <h3>Перфоратор BOSCH BFG 2000</h3>
-              <s>22500 Р.</s>
+            <img src="img/catalog/bosch_bfg_2000.jpg" width="127" height="112"
+              alt="Перфоратор BOSCH BFG 2000  с аккумулятором, синего цвета с черными вставками и красными кнопками">
+            <h3>Перфоратор BOSCH BFG 2000</h3>
+            <s>22500 Р.</s>
+            <div class="price">
               <p>12500 Р.</p>
             </div>
           </a>
@@ -402,19 +402,25 @@
   <section class="modal">
     <h2 class="visually-hidden">Написать нам</h2>
     <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-      <p>
-        <label for="write-name">Ваше имя:</label>
+      <div>
+        <label for="write-name">
+          <p>Ваше имя:</p>
+        </label>
         <input id="write-name" type="text" name="name" placeholder="Имя Фамилия">
-      </p>
-      <p>
-        <label for="write-email">Ваш e-mail:</label>
+      </div>
+      <div>
+        <label for="write-email">
+          <p>Ваш e-mail:</p>
+        </label>
         <input id="write-email" type="email" name="email" placeholder="email@example.com">
-      </p>
-      <p>
-        <label for="write-text">Текст письма:</label>
+      </div>
+      <div class="write-text-container">
+        <label for="write-text">
+          <p>Текст письма:</p>
+        </label>
         <textarea name="text" id="write-text" cols="30" rows="5" placeholder="В свободной форме"></textarea>
-      </p>
-      <button class="button" type="submit">Отправить</button>
+      </div>
+      <button class="button modal-button" type="submit">Отправить</button>
     </form>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
