@@ -662,13 +662,10 @@ img {
   background-color: var(--basic-white);
   color: var(--basic-black);
   border: 1px solid #eaeaea;
-  display: flex;
-  justify-content: flex-end;
   width: 220px;
   margin-right: 20px;
   margin-bottom: 20px;
   box-sizing: border-box;
-  min-height: 318px;
   padding-left: 20px;
   padding-right: 20px;
   position: relative;
@@ -682,24 +679,13 @@ img {
   filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
 }
 
-.card:hover a img {
-  display: none;
-}
-
-.button-card {
-  display: none;
-}
-
-.card:hover a .button-card {
-  display: block;
-}
-
-.card a {
+.card-goods {
   margin: 0;
   display: flex;
+  min-height: 318px;
   flex-direction: column;
   text-align: center;
-  justify-content: center;
+  align-items: center;
 }
 
 .price {
@@ -750,7 +736,7 @@ img {
   margin: auto auto;
 }
 
-.new-goods a::after {
+.new-goods .card-goods::after {
   content: "";
   position: absolute;
   top: 0;
@@ -1519,12 +1505,12 @@ img {
   text-transform: uppercase;
 }
 
-.breadcrumbs a:hover{
+.breadcrumbs a:hover {
   color: var(--basic-red);
 }
 
-.breadcrumbs a:focus{
-  color: #BA2732;
+.breadcrumbs a:focus {
+  color: #ba2732;
 }
 
 .breadcrumbs a:hover svg path {
@@ -1532,9 +1518,8 @@ img {
 }
 
 .breadcrumbs a:focus svg path {
-  fill: #BA2732;
+  fill: #ba2732;
 }
-
 
 .main-title-catalog {
   margin: 0;
@@ -1989,13 +1974,13 @@ fieldset.filter-supply legend {
   margin-right: 0;
 }
 
+.card:hover a img {
+  display: none;
+}
+
 .button-card {
   width: 135px;
   height: 38px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  vertical-align: middle;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
@@ -2010,13 +1995,41 @@ fieldset.filter-supply legend {
   background-color: #63a63e;
   box-shadow: inset 0px -3px 0px #367315;
   color: var(--basic-white);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: normal;
+  padding-top: 10px;
+  box-sizing: border-box;
+  padding-left: 13px;
+  position: relative;
+}
+
+.button-card-buy::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 23px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.button-card {
+  display: none;
+}
+
+.card:hover .button-card {
+  display: block;
 }
 
 .button-card-buy:hover {
   background-color: #5fbb2d;
 }
 
-.button-card-buy:focus {
+.button-card-buy:active {
   background-color: #518534;
 }
 
