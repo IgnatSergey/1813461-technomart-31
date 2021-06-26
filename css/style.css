@@ -107,6 +107,10 @@ img {
 
 /* Searh */
 
+.search-form {
+  position: relative;
+}
+
 .search-form input {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
@@ -118,9 +122,51 @@ img {
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 42px;
-  background-image: url("../img/icon-search\(opacity_0.3\).svg");
+  /* background-image: url("../img/icon-search\(opacity_0.3\).svg");
   background-repeat: no-repeat;
-  background-position: 17px 12px;
+  background-position: 17px 12px; */
+  /* margin-left: 40px; */
+}
+
+.search-form::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 17px;
+  width: 11px;
+  height: 11px;
+  background-color: transparent;
+  z-index: 1;
+  border-radius: 50%;
+  border: 2px solid #69717e;
+}
+
+.search-form::after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 28px;
+  width: 6px;
+  height: 2px;
+  background-color: #69717e;
+  z-index: 1;
+  transform: rotate(45deg);
+}
+
+.search-form:hover::before {
+  border: 2px solid var(--basic-white);
+}
+
+.search-form:hover::after {
+  background-color: var(--basic-white);
+}
+
+.search-form:active::before {
+  border: 2px solid var(--basic-red);
+}
+
+.search-form:active::after {
+  background-color: var(--basic-red);
 }
 
 .search-form input::placeholder {
@@ -128,9 +174,9 @@ img {
 }
 
 .search-form input:hover {
-  background-image: url("../img/icon-search.svg");
+  /* background-image: url("../img/icon-search.svg");
   background-repeat: no-repeat;
-  background-position: 17px 12px;
+  background-position: 17px 12px; */
 }
 
 .search-form input:focus {
@@ -138,9 +184,9 @@ img {
   color: var(--basic-black);
   border-radius: 0;
   outline: none;
-  background-image: url("../img/icon-search-red.svg");
+  /* background-image: url("../img/icon-search-red.svg");
   background-repeat: no-repeat;
-  background-position: 17px 12px;
+  background-position: 17px 12px; */
 }
 
 /* Buy list */
@@ -159,11 +205,12 @@ img {
   padding-top: 9px;
   padding-bottom: 9px;
   position: relative;
+  width: 150px;
+  box-sizing: border-box;
 }
 
 .marker {
   padding-left: 43px;
-  padding-right: 24px;
 }
 
 .marker::before {
@@ -180,7 +227,6 @@ img {
 
 .basket {
   padding-left: 49px;
-  padding-right: 26px;
 }
 
 .basket::before {
@@ -654,97 +700,8 @@ img {
   flex-wrap: wrap;
 }
 
-.card {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 17px;
-  line-height: 18px;
-  font-weight: 700;
-  background-color: var(--basic-white);
-  color: var(--basic-black);
-  border: 1px solid #eaeaea;
-  width: 220px;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-  padding-left: 20px;
-  padding-right: 20px;
-  position: relative;
-}
-
 .popular-goods-list .card:nth-child(4n) {
   margin-right: 0;
-}
-
-.card:hover {
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
-}
-
-.card-goods {
-  margin: 0;
-  display: flex;
-  min-height: 318px;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-}
-
-.price {
-  width: 100%;
-  height: 38px;
-  background-image: url(../img/red-button.svg);
-  background-repeat: no-repeat;
-  background-position: 25px 0px;
-  margin-bottom: 21px;
-}
-
-.card s,
-.card p {
-  margin: 0;
-  font-size: 17px;
-  line-height: 18px;
-  color: #a9a9a9;
-}
-
-.card s {
-  margin: 0;
-  font-size: 17px;
-  line-height: 18px;
-  color: #a9a9a9;
-}
-
-.card s {
-  display: block;
-  margin-bottom: 13px;
-}
-
-.card p {
-  color: var(--basic-white);
-  margin-top: 10px;
-}
-
-.card h3 {
-  margin: 0;
-  color: var(--basic-black);
-  margin-bottom: 7px;
-}
-
-.card s:empty + .price {
-  margin-top: 18px;
-}
-
-.card img {
-  margin: auto auto;
-}
-
-.new-goods .card-goods::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 70px;
-  height: 70px;
-  background-image: url("../img/new.svg");
-  background-repeat: no-repeat;
 }
 
 .popular-manufacturers-list {
@@ -1025,7 +982,7 @@ img {
   margin-bottom: 54px;
 }
 
-.main-footer-logo img {
+.footer-container img {
   display: block;
   margin: 0;
   margin-bottom: 21px;
@@ -1888,6 +1845,8 @@ fieldset.filter-supply legend {
   margin-right: 30px;
 }
 
+/* Sorting */
+
 .sorting p {
   margin: 0;
   padding: 0;
@@ -1960,6 +1919,101 @@ fieldset.filter-supply legend {
 .sorting-button-increase:focus svg path,
 .sorting-button-decrease:focus svg path {
   fill: #ee3643;
+}
+
+/* Catalog */
+
+.card {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+  border: 1px solid #eaeaea;
+  width: 220px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.card:hover {
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+}
+
+.card-goods {
+  margin: 0;
+  display: flex;
+  min-height: 318px;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.price {
+  width: 100%;
+  height: 38px;
+  background-image: url(../img/red-button.svg);
+  background-repeat: no-repeat;
+  background-position: 25px 0px;
+  margin-bottom: 21px;
+}
+
+.card s,
+.card p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 18px;
+  color: #a9a9a9;
+}
+
+.card s {
+  margin: 0;
+  font-size: 17px;
+  line-height: 18px;
+  color: #a9a9a9;
+}
+
+.card s {
+  display: block;
+  margin-bottom: 13px;
+}
+
+.card p {
+  color: var(--basic-white);
+  margin-top: 10px;
+}
+
+.card h3 {
+  margin: 0;
+  color: var(--basic-black);
+  margin-bottom: 7px;
+}
+
+.card s:empty + .price {
+  margin-top: 18px;
+}
+
+.card img {
+  margin: auto auto;
+  width: 190px;
+  height: 165px;
+  object-fit: contain;
+  background-color:var(--basic-white);
+}
+
+.new-goods .card-goods::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  background-image: url("../img/new.svg");
+  background-repeat: no-repeat;
 }
 
 .catalog-list {
@@ -2048,6 +2102,8 @@ fieldset.filter-supply legend {
   opacity: 0.3;
 }
 
+/* Pagination */
+
 .pagination-list {
   margin: 0;
   padding: 0;
@@ -2089,6 +2145,8 @@ fieldset.filter-supply legend {
 .pagination-item a:focus {
   border: 1px solid var(--basic-red);
 }
+
+/* About perforators */
 
 .about-perforators {
   display: block;
