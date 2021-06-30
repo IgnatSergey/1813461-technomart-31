@@ -15,7 +15,7 @@ leafSlideNext.addEventListener("click", function() {
     slides[i].classList.remove("slide-current");
     i++;
     slides[i].classList.add("slide-current");
-    if (i == slides.length - 1) {
+    if (i === slides.length - 1) {
         leafSlideNext.disabled = true;
     }
     sliderContainer.classList.remove(nameSliderContainerCurrent);
@@ -28,7 +28,7 @@ leafSlideBack.addEventListener("click", function() {
     slides[i].classList.remove("slide-current");
     i--;
     slides[i].classList.add("slide-current");
-    if (i == 0) {
+    if (i === 0) {
         leafSlideBack.disabled = true;
     }
     leafSlideNext.disabled = false;
