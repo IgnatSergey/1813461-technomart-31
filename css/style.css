@@ -294,7 +294,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .main-header-wrapper-block {
   display: grid;
-  grid-template-columns: auto auto 300px;
+  grid-template-columns: 320px auto 300px;
 }
 
 /* Title */
@@ -311,18 +311,17 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* Header contacts */
 
-.contacts-header {
-  text-align: center;
-}
-
 .phone-header {
   font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
   color: var(--basic-red);
-  margin: 0 auto;
-  padding-left: 74px;
-  padding-right: 50px;
+  margin: 0;
+  margin-right: auto;
+  margin-bottom: 2px;
+  padding-left: 70px;
   padding-top: 7px;
-  padding-bottom: 8px;
+  padding-bottom: 5px;
   display: block;
   width: 270px;
   border: 3px solid var(--basic-white);
@@ -347,6 +346,7 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 0;
   font-size: 14px;
   color: var(--basic-dark-blue);
+  margin-left: 6px;
   padding-bottom: 40px;
 }
 
@@ -675,6 +675,7 @@ input[type="search"]::-webkit-search-results-decoration {
   padding-top: 11px;
   padding-bottom: 9px;
   text-align: center;
+  font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   background-color: var(--basic-red);
@@ -695,7 +696,10 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* Popular goods/Popular manufacturers*/
 
-.popular-goods,
+.popular-goods {
+  margin-bottom: 50px;
+}
+
 .popular-manufacturers {
   margin-bottom: 70px;
 }
@@ -751,6 +755,7 @@ input[type="search"]::-webkit-search-results-decoration {
   height: 145px;
   background-color: var(--basic-white);
   border: 1px solid var(--card-border-color);
+  box-sizing: border-box;
 }
 
 .popular-manufacturers-link:hover {
@@ -775,7 +780,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .services-container {
-  margin-bottom: 70px;
+  margin-bottom: 68px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 20px;
@@ -802,7 +807,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .services-container h2 {
-  margin-top: 64px;
+  margin-top: 62px;
   margin-bottom: 25px;
 }
 
@@ -961,8 +966,14 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-bottom: 20px;
 }
 
+.deliver-item {
+  margin-bottom: 12px;
+  margin-top: 5px;
+}
+
 .deliver-item p {
   position: relative;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -978,11 +989,19 @@ input[type="search"]::-webkit-search-results-decoration {
   background-color: var(--basic-red);
 }
 
+.button-about-company {
+  width: 220px;
+}
+
 /* Contacts */
 
 .contacts p {
   width: 180px;
   margin-bottom: 32px;
+}
+
+.batton-map figure {
+  margin-bottom: 25px;
 }
 
 .button-write-us {
@@ -1075,9 +1094,9 @@ input[type="search"]::-webkit-search-results-decoration {
   margin: 0;
   padding: 0;
   list-style: none;
-  text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: 70px;
 }
 
 .copyright-footer {
@@ -1092,7 +1111,7 @@ input[type="search"]::-webkit-search-results-decoration {
   column-gap: 20px;
   width: 940px;
   margin: 0 auto;
-  padding-top: 34px;
+  padding-top: 37px;
   padding-bottom: 29px;
 }
 
@@ -1204,7 +1223,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .write-us-form input,
 .write-us-form textarea {
   width: 100%;
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -1222,7 +1241,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .write-us-form textarea {
   min-height: 114px;
   margin-top: 11px;
-  margin-bottom: 37px;
+  margin-bottom: 34px;
   padding-top: 6px;
 }
 
@@ -1235,7 +1254,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .modal-close {
   position: absolute;
-  top: 30px;
+  top: 27px;
   right: 8px;
   width: 21px;
   height: 21px;
@@ -1325,6 +1344,7 @@ input[type="search"]::-webkit-search-results-decoration {
   display: inline-block;
   vertical-align: top;
   margin: 0;
+  margin-left: 3px;
   padding: 0;
   padding-top: 11px;
   padding-bottom: 9px;
@@ -1478,6 +1498,11 @@ input[type="search"]::-webkit-search-results-decoration {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
 }
 
 .breadcrumbs li {
@@ -1530,7 +1555,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .main-title-catalog {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
   padding-top: 30px;
   padding-left: 30px;
   padding-bottom: 30px;
@@ -1555,6 +1580,7 @@ input[type="search"]::-webkit-search-results-decoration {
   padding-top: 10px;
   padding-left: 18px;
   padding-bottom: 10px;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   background-color: var(--basic-light-beige);
@@ -1575,6 +1601,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .filter legend {
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
@@ -1676,11 +1703,11 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 fieldset.filter-manufacturer {
-  margin-top: 16px;
+  margin-top: 18px;
 }
 
 fieldset.filter-supply {
-  margin-top: 18px;
+  margin-top: 20px;
 }
 
 fieldset.filter-manufacturer legend {
@@ -1834,6 +1861,8 @@ fieldset.filter-supply legend {
   padding-top: 10px;
   padding-bottom: 10px;
   text-align: center;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: normal;
   font-size: 13px;
   line-height: 18px;
   background-color: var(--basic-white);
@@ -1860,7 +1889,7 @@ fieldset.filter-supply legend {
 .sorting {
   padding-bottom: 10px;
   padding-left: 20px;
-  padding-top: 10px;
+  padding-top: 9px;
   font-size: 13px;
   line-height: 18px;
   background-color: var(--basic-light-beige);
@@ -1874,7 +1903,7 @@ fieldset.filter-supply legend {
 .button-sorting-list {
   margin: 0;
   padding: 0;
-  margin-left: 132px;
+  margin-left: 134px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -1978,7 +2007,7 @@ fieldset.filter-supply legend {
   border: 1px solid var(--card-border-color);
   width: 220px;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   box-sizing: border-box;
   position: relative;
   display: flex;
@@ -1997,7 +2026,7 @@ fieldset.filter-supply legend {
 .card-goods {
   margin: 0;
   display: flex;
-  min-height: 318px;
+  min-height: 316px;
   flex-direction: column;
   text-align: center;
   align-items: center;
@@ -2040,6 +2069,8 @@ fieldset.filter-supply legend {
 
 .card h3 {
   margin: 0;
+  font-size: 18px;
+  line-height: 20px;
   color: var(--basic-black);
   margin-bottom: 7px;
   margin-top: auto;
@@ -2071,6 +2102,7 @@ fieldset.filter-supply legend {
 .catalog-list {
   margin: 0;
   padding: 0;
+  margin-bottom: 30px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
