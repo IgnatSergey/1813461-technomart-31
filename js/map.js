@@ -1,4 +1,4 @@
-const mapLink = document.querySelector(".batton-map");
+const mapLink = document.querySelector(".button-map");
 const mapPopup = document.querySelector(".modal-map");
 const mapClose = mapPopup.querySelector(".modal-close");
 

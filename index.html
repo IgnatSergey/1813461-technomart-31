@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <title>Техномарт</title>
 </head>
 
@@ -129,12 +129,12 @@
         <div class="slider-container slider-container-1">
           <ul class="slider-list">
             <li class="slider-item slide slide-current">
-              <h3 class="slide-title">Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-            </li>
-            <li class="slider-item slide">
               <h3 class="slide-title">Дрели</h3>
               <p>Соседям на радость!</p>
+            </li>
+            <li class="slider-item slide">
+              <h3 class="slide-title">Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
             </li>
           </ul>
           <a class="button slider-button" href="catalog.html" title="Каталог">открыть каталог</a>
@@ -154,6 +154,10 @@
                 fill="white" />
             </svg>
           </button>
+          <div class="slider-controls">
+            <button class="current" type="button" aria-label="Первый слайд"></button>
+            <button type="button" aria-label="Второй слайд"></button>
+          </div>
         </div>
       </section>
 
@@ -308,7 +312,7 @@
 
     <section class="services">
       <div class="services-container container">
-        <div class="services-intoduction">
+        <div class="services-introduction">
           <h2>Сервисы</h2>
           <p>
             Хороший интернет-магазин отличается от плохого не только ценами!
@@ -402,7 +406,7 @@
       <section class="contacts">
         <h2>контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
-        <a class="batton-map" href="#" title="Карта расположения офиса">
+        <a class="button-map" href="#" title="Карта расположения офиса">
           <figure class="map"></figure>
         </a>
         <a class="button button-write-us" href="#" title="Заблудились? Напишите нам!">Заблудились? Напишите нам!</a>
@@ -562,7 +566,8 @@
   <script src="js/write-us.min.js"></script>
   <script src="js/map.min.js"></script>
   <script src="js/modal-buy.min.js"></script>
-  <script src="js/slider.min.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/slider-services.js"></script>
 </body>
 
 </html>

@@ -11,7 +11,7 @@
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="css/normalize.css" />
-  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
   <title>Техномарт-каталог</title>
 </head>
 
@@ -155,14 +155,16 @@
             <div class="range-filter">
               <div class="range-controls">
                 <div class="scale">
-                  <div class="bar" style="width: 30%; margin-left: 20%"></div>
+                  <div class="bar"></div>
                 </div>
-                <div class="toggle toggle-min" tabindex="0" style="left: 20%"></div>
-                <div class="toggle toggle-max" tabindex="0" style="left: 50%"></div>
+                <div class="toggle toggle-min" tabindex="0"></div>
+                <div class="toggle toggle-max" tabindex="0"></div>
               </div>
               <div class="price-controls">
-                <input type="number" name="min-price" value="0" />
-                <input type="number" name="max-price" value="30000" />
+                <label for="min-price" class="visually-hidden">цена от</label>
+                <input type="number" name="min-price" value="0" id="min-price" />
+                <label for="max-price" class="visually-hidden">цена до</label>
+                <input type="number" name="max-price" value="30000" id="max-price" />
               </div>
             </div>
           </fieldset>
@@ -426,8 +428,8 @@
       </div>
     </section>
 
-    <section class="about-perforators">
-      <div class="about-perforators-wrapper container">
+    <section class="about-punchers">
+      <div class="about-punchers-wrapper container">
         <h2>пара слов о перфораторах</h2>
         <p>
           Перфоратор — универсальный строительный инструмент. Предназначен для

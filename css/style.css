@@ -15,7 +15,6 @@
   --tool-background: #3bbce3;
   --technics-background: #dc91d8;
   --discount-background: #8ed78f;
-  --deliver-background: #ffbf47;
   --chekout-color: #63a63e;
   --chekout-hover-color: #5fbb2d;
   --chekout-focus-color: #63a63e;
@@ -39,6 +38,10 @@
   --button-card-shadow-color: #367315;
   --button-card-active-color: #518534;
   --background-image-color: #524c33;
+  --basic-white-rgb: 255, 255, 255;
+  --basic-black-rgb: 0, 0, 0;
+  --basic-greylight-rgb: 197, 197, 197;
+  --basic-grey-rgb: 169, 169, 169;
 }
 
 /* Global */
@@ -268,7 +271,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .marker:focus,
 .basket:focus {
   background: var(--basic-extra-dark-blue);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--basic-white-rgb), 0.5);
 }
 
 .checkout {
@@ -283,7 +286,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .checkout:focus {
   background-color: var(--chekout-focus-color);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--basic-white-rgb), 0.5);
 }
 
 .add-goods {
@@ -410,6 +413,10 @@ input[type="search"]::-webkit-search-results-decoration {
   color: var(--signin-focus-color);
 }
 
+.signin:focus path {
+  fill: var(--signin-focus-color);
+}
+
 /* Main navigation */
 
 .main-navigation {
@@ -448,7 +455,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .site-navigation a:focus {
   background-color: var(--basic-blue);
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(var(--basic-white-rgb), 0.5);
 }
 
 /* Offers grid */
@@ -529,7 +536,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .offers-item-deliver {
-  background-color: var(--deliver-background);
+  background-color: var(--materials-background);
   background-image: url("../img/icon-delivery.svg");
   background-repeat: no-repeat;
   background-position: 191px 32px;
@@ -555,18 +562,18 @@ input[type="search"]::-webkit-search-results-decoration {
   text-align: center;
   font-size: 14px;
   line-height: 18px;
-  background-color: rgb(255, 255, 255, 0.3);
+  background-color: rgba(var(--basic-white-rgb), 0.3);
   text-transform: uppercase;
 }
 
 .products-item a:hover,
 .offers-item a:hover {
-  background-color: rgb(197, 197, 197, 0.3);
+  background-color: rgba(var(--basic-greylight-rgb), 0.3);
 }
 
 .products-item a:focus,
 .offers-item a:focus {
-  background-color: rgb(169, 169, 169, 0.3);
+  background-color: rgba(var(--basic-grey-rgb), 0.3);
 }
 
 /* Slider */
@@ -582,12 +589,12 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .slider-container-1 {
-  background-image: url(../img/punchers.jpg);
+  background-image: url(../img/drill.jpg);
   background-repeat: no-repeat;
 }
 
 .slider-container-2 {
-  background-image: url(../img/drill.jpg);
+  background-image: url(../img/punchers.jpg);
   background-repeat: no-repeat;
 }
 
@@ -663,6 +670,30 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .slider-button-back:disabled:hover {
   transform: scale(1);
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 36px;
+  left: 295px;
+  display: flex;
+  width: 30px;
+  justify-content: space-between;
+}
+
+.slider-controls button {
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--basic-white);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls .current {
+  background-color: var(--basic-red);
+  border: 2px solid var(--basic-white);
 }
 
 /* Button */
@@ -759,7 +790,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .popular-manufacturers-link:hover {
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 20px rgba(var(--basic-black-rgb), 0.15));
 }
 
 .popular-manufacturers-link:active .manufacturers-logo {
@@ -786,7 +817,7 @@ input[type="search"]::-webkit-search-results-decoration {
   column-gap: 20px;
 }
 
-.services-intoduction {
+.services-introduction {
   grid-column: 1/4;
   margin-bottom: 70px;
 }
@@ -822,7 +853,7 @@ input[type="search"]::-webkit-search-results-decoration {
   color: var(--basic-black);
 }
 
-.services-intoduction p {
+.services-introduction p {
   display: block;
   width: 400px;
 }
@@ -1000,7 +1031,7 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-bottom: 32px;
 }
 
-.batton-map figure {
+.button-map figure {
   margin-bottom: 25px;
 }
 
@@ -1174,7 +1205,7 @@ input[type="search"]::-webkit-search-results-decoration {
   bottom: 0;
   left: 0;
   margin: auto;
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 20px rgba(var(--basic-black-rgb), 0.15));
 }
 
 .modal-write-us {
@@ -1644,8 +1675,9 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .range-controls .bar {
-  width: 90%;
+  width: 30%;
   height: 2px;
+  margin-left: 20%;
   background: var(--chekout-focus-color);
 }
 
@@ -1664,11 +1696,11 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .range-controls .toggle-min {
-  left: 18px;
+  left: 20%;
 }
 
 .range-controls .toggle-max {
-  left: 160px;
+  left: 50%;
 }
 
 .price-controls {
@@ -1692,14 +1724,14 @@ input[type="search"]::-webkit-search-results-decoration {
   margin-bottom: 25px;
 }
 
-.price-controls input:focus {
-  outline: none;
-}
-
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 fieldset.filter-manufacturer {
@@ -1929,7 +1961,7 @@ fieldset.filter-supply legend {
 }
 
 .sorting-button span {
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(var(--basic-black-rgb), 0.3);
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: normal;
   font-size: 13px;
@@ -2020,7 +2052,7 @@ fieldset.filter-supply legend {
 }
 
 .card:hover {
-  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(0px 4px 20px rgba(var(--basic-black-rgb), 0.15));
 }
 
 .card-goods {
@@ -2232,9 +2264,9 @@ fieldset.filter-supply legend {
   padding-right: 32px;
 }
 
-/* About perforators */
+/* About punchers */
 
-.about-perforators {
+.about-punchers {
   display: block;
   background-color: var(--basic-background);
   width: 100%;
@@ -2242,7 +2274,7 @@ fieldset.filter-supply legend {
   padding-bottom: 68px;
 }
 
-.about-perforators h2 {
+.about-punchers h2 {
   margin: 0;
   margin-bottom: 25px;
   font-size: 30px;
@@ -2252,7 +2284,7 @@ fieldset.filter-supply legend {
   text-transform: uppercase;
 }
 
-.about-perforators p {
+.about-punchers p {
   margin: 0;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
