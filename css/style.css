@@ -38,10 +38,12 @@
   --button-card-shadow-color: #367315;
   --button-card-active-color: #518534;
   --background-image-color: #524c33;
-  --basic-white-rgb: 255, 255, 255;
-  --basic-black-rgb: 0, 0, 0;
-  --basic-greylight-rgb: 197, 197, 197;
-  --basic-grey-rgb: 169, 169, 169;
+  --basic-grey-focus-color: rgba(255, 255, 255, 0.5);
+  --offers-button-color: rgba(255, 255, 255, 0.3);
+  --basic-shadow-color: rgba(0, 0, 0, 0.15);
+  --sorting-button-color: rgba(0, 0, 0, 0.3);
+  --offers-button-hover-color: rgba(197, 197, 197, 0.3);
+  --offers-button-focus-color: rgba(169, 169, 169, 0.3);
 }
 
 /* Global */
@@ -271,7 +273,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .marker:focus,
 .basket:focus {
   background: var(--basic-extra-dark-blue);
-  color: rgba(var(--basic-white-rgb), 0.5);
+  color: var(--basic-grey-focus-color);
 }
 
 .checkout {
@@ -286,7 +288,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .checkout:focus {
   background-color: var(--chekout-focus-color);
-  color: rgba(var(--basic-white-rgb), 0.5);
+  color: var(--basic-grey-focus-color);
 }
 
 .add-goods {
@@ -455,7 +457,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .site-navigation a:focus {
   background-color: var(--basic-blue);
-  color: rgba(var(--basic-white-rgb), 0.5);
+  color: var(--basic-grey-focus-color);
 }
 
 /* Offers grid */
@@ -562,18 +564,18 @@ input[type="search"]::-webkit-search-results-decoration {
   text-align: center;
   font-size: 14px;
   line-height: 18px;
-  background-color: rgba(var(--basic-white-rgb), 0.3);
+  background-color: var(--offers-button-color);
   text-transform: uppercase;
 }
 
 .products-item a:hover,
 .offers-item a:hover {
-  background-color: rgba(var(--basic-greylight-rgb), 0.3);
+  background-color: var(--offers-button-hover-color);
 }
 
 .products-item a:focus,
 .offers-item a:focus {
-  background-color: rgba(var(--basic-grey-rgb), 0.3);
+  background-color: var(--offers-button-focus-color);
 }
 
 /* Slider */
@@ -790,7 +792,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .popular-manufacturers-link:hover {
-  filter: drop-shadow(0px 4px 20px rgba(var(--basic-black-rgb), 0.15));
+  filter: drop-shadow(0px 4px 20px var(--basic-shadow-color));
 }
 
 .popular-manufacturers-link:active .manufacturers-logo {
@@ -838,7 +840,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .services-container h2 {
-  margin-top: 62px;
+  margin-top: 64px;
   margin-bottom: 25px;
 }
 
@@ -897,20 +899,15 @@ input[type="search"]::-webkit-search-results-decoration {
   cursor: pointer;
 }
 
-.button-services-slider:hover {
+.button-services-slider:not(.button-pressed):hover {
   background-color: var(--basic-blue);
 }
 
-.button-services-slider:focus {
+.button-pressed {
   background-color: var(--basic-white);
   color: var(--basic-dark-blue);
   box-shadow: 0px 1px 0px var(--basic-white);
-}
-
-.button-services-slider:active {
-  background-color: var(--basic-white);
-  color: var(--basic-dark-blue);
-  box-shadow: 0px 1px 0px var(--basic-white);
+  cursor: default;
 }
 
 .services-info-slider-list h3 {
@@ -1205,7 +1202,7 @@ input[type="search"]::-webkit-search-results-decoration {
   bottom: 0;
   left: 0;
   margin: auto;
-  filter: drop-shadow(0px 4px 20px rgba(var(--basic-black-rgb), 0.15));
+  filter: drop-shadow(0px 4px 20px var(--basic-shadow-color));
 }
 
 .modal-write-us {
@@ -1961,7 +1958,7 @@ fieldset.filter-supply legend {
 }
 
 .sorting-button span {
-  color: rgba(var(--basic-black-rgb), 0.3);
+  color: var(--sorting-button-color);
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: normal;
   font-size: 13px;
@@ -2052,7 +2049,7 @@ fieldset.filter-supply legend {
 }
 
 .card:hover {
-  filter: drop-shadow(0px 4px 20px rgba(var(--basic-black-rgb), 0.15));
+  filter: drop-shadow(0px 4px 20px var(--basic-shadow-color));
 }
 
 .card-goods {
