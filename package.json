@@ -1,0 +1,24 @@
+{
+  "name": "1813461-technomart-31",
+  "version": "1.0.0",
+  "description": "Учебный проект на курсе от HTML Academy \"HTML и CSS. Профессиональная вёрстка сайтов\".",
+  "main": "index.js",
+  "homepage": "https://IgnatSergey.github.io/technomart",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgnatSergey/1813461-technomart-31.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgnatSergey/1813461-technomart-31/issues"
+  },
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
